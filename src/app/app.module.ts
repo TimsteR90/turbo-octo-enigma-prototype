@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+
+import { TabsPage } from '../pages/tabs/tabs';
+import { InventoryTabPage } from '../pages/inventory-tab/inventory-tab';
+import { ShoppinglistTabPage } from '../pages/shoppinglist-tab/shoppinglist-tab'; 
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    TabsPage,
+    InventoryTabPage,
+    ShoppinglistTabPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -14,7 +19,9 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    TabsPage,
+    InventoryTabPage,
+    ShoppinglistTabPage
   ],
   providers: []
 })
