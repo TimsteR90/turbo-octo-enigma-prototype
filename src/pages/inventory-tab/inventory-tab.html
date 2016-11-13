@@ -13,6 +13,17 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <ion-list>
+    <ion-item-group *ngFor="let productcategory of inventory">
+      <ion-item-divider class="own-item-divider">{{productcategory.productcategory_name}}</ion-item-divider>
+      <ion-item-sliding *ngFor="let product of productcategory.product_list">
+        <ion-item>{{product.product_name}}<span item-right><ion-icon name="md-calendar"></ion-icon> {{product.expiration_date | date: "dd.MM.yyyy"}}</span></ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="danger"><ion-icon name="trash"></ion-icon></button>
+          <button ion-button><ion-icon name="md-create"></ion-icon></button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-item-group>
+  </ion-list>
 </ion-content>
