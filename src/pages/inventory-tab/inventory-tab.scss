@@ -8,16 +8,22 @@ page-inventory-tab {
         background-color: #DDDDDD;
     }
 
-    ion-item {
-        height: 3.5em;
+    .item-inner {
+        padding: 0 !important;
     }
 
-    button {
-        width: 53px;
+    ion-item {
+        height: 55px;
     }
 
     ion-item-options {
-        width: 106px;
+        width: 108px;
+    }
+
+    ion-item-options button {
+        height: 54px !important;
+        width: 54px !important;
+        margin: 0 !important;
     }
 
     ion-icon {

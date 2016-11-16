@@ -5,13 +5,15 @@ import { MyApp } from './app.component';
 import { TabsPage } from '../pages/tabs/tabs';
 import { InventoryTabPage } from '../pages/inventory-tab/inventory-tab';
 import { ShoppinglistTabPage } from '../pages/shoppinglist-tab/shoppinglist-tab'; 
+import { MorePopoverPage } from '../pages/more-popover/more-popover';
 
 @NgModule({
   declarations: [
     MyApp,
     TabsPage,
     InventoryTabPage,
-    ShoppinglistTabPage
+    ShoppinglistTabPage,
+    MorePopoverPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -21,7 +23,8 @@ import { ShoppinglistTabPage } from '../pages/shoppinglist-tab/shoppinglist-tab'
     MyApp,
     TabsPage,
     InventoryTabPage,
-    ShoppinglistTabPage
+    ShoppinglistTabPage,
+    MorePopoverPage
   ],
   providers: []
 })
