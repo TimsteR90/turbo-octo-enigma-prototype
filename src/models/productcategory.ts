@@ -14,6 +14,15 @@ export class Productcategory {
         this.is_deleted = false;
     }
 
+    get getProductList(): Array<Product> {
+        return this.product_list;
+    }
+
+    get getProductcategoryName(): string {
+        return this.productcategory_name;
+    }
+
+
     add_product(product: Product) {
         this.product_list.push(product);
     }
@@ -24,5 +33,9 @@ export class Productcategory {
                 this.product_list.splice(i, 1);
             }
         }
+    }
+
+    clear_product_list() {
+        this.product_list = new Array<Product>();
     }
 }

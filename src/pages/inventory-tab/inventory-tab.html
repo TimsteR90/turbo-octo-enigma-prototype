@@ -26,14 +26,14 @@
       <ion-item-sliding>
         <ion-item class="own-item-divider">{{productcategory.productcategory_name}}</ion-item>
         <ion-item-options side="right">
-          <button ion-button color="danger"><ion-icon name="trash"></ion-icon></button>
+          <button ion-button color="danger" (click)="removeProductcategory(productcategory)"><ion-icon name="trash"></ion-icon></button>
           <button ion-button><ion-icon name="md-create"></ion-icon></button>
         </ion-item-options>
       </ion-item-sliding>
       <ion-item-sliding *ngFor="let product of productcategory.product_list">
         <ion-item>{{product.product_name}}<span item-right><ion-icon name="md-calendar"></ion-icon> {{product.expiration_date | date: "dd.MM.yyyy"}}</span></ion-item>
         <ion-item-options side="right">
-          <button ion-button color="danger"><ion-icon name="trash"></ion-icon></button>
+          <button ion-button color="danger" (click)="removeProductFromProductcategory(product)"><ion-icon name="trash"></ion-icon></button>
           <button ion-button><ion-icon name="md-create"></ion-icon></button>
         </ion-item-options>
       </ion-item-sliding>
@@ -43,7 +43,7 @@
       <ion-item-sliding *ngFor="let product of uncategorized_inventory">
           <ion-item>{{product.product_name}}<span item-right><ion-icon name="md-calendar"></ion-icon> {{product.expiration_date | date: "dd.MM.yyyy"}}</span></ion-item>
         <ion-item-options side="right">
-          <button ion-button color="danger"><ion-icon name="trash"></ion-icon></button>
+          <button ion-button color="danger" (click)="removeProductFromUncategorized(product)"><ion-icon name="trash"></ion-icon></button>
           <button ion-button><ion-icon name="md-create"></ion-icon></button>
         </ion-item-options>
       </ion-item-sliding>

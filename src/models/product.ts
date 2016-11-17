@@ -15,4 +15,8 @@ export class Product {
         this.is_shown = true;
         this.is_deleted = false;
     }
+
+    get getProductcategoryName(): string {
+        return this.productcategory_name;
+    }
 }
