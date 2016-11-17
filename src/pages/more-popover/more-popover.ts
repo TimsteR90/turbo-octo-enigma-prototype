@@ -2,12 +2,7 @@ import { Component } from '@angular/core';
 import { ViewController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
-import {  
-  FormBuilder,  
-  FormGroup,  
-  Validators,  
-  AbstractControl  
-} from '@angular/forms';
+
 @Component({
   selector: 'page-more-popover',
   templateUrl: 'more-popover.html'
